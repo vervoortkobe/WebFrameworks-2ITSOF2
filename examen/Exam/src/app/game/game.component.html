@@ -1,0 +1,34 @@
+<article class="message">
+    <div class="message-header">
+        <p><strong>player123</strong> is now Playing</p>
+    </div>
+    <div class="message-body">
+        <div class="block" *ngIf="Ready">
+            Ready ? 
+            <span class="icon is-large">
+            <i class="fas fa-spinner fa-spin"></i>
+            </span>
+        </div>
+        <div *ngIf="!Ready">
+            <div class="block">
+                The <strong>sum</strong> of
+                <input class="input is-success" type="text" disabled value="{{getal1}}">
+                and
+                <input class="input is-success" type="text" disabled value="{{getal2}}">
+                is
+                <input class="input is-danger" type="number" #inputNumber>
+            </div>
+            <div class="block">
+                <progress class="progress is-primary" value="1" max="10"></progress>
+            </div>
+            <div class="block">
+                question: <strong>{{vraagNummer}}</strong>, you scored <strong>{{score}}</strong>p
+                <div class="buttons is-right">
+                    <button class="button is-success" *ngIf="!stopSpel" (click)="VolgendeVraag()">Next</button>
+                    <button class="button is-success" *ngIf="stopSpel" [routerLink]="'/scores'">Next</button>
+                    <button class="button is-danger" *ngIf="!stopSpel">End game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

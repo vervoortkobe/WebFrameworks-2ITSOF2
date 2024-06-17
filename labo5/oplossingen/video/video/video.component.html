@@ -1,0 +1,13 @@
+<video #vid1 [style.width.px]="activeres.width" [height]="activeres.height" [controls]="true" (playing)="Start(true)" (pause)="Start(false)" autoplay muted>
+    <source src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<br>
+<select #sel1 (change)="SelRes(sel1.value)">
+    <option *ngFor="let res of resolutions; let i = index" [value]="i">{{res.width}}x{{res.height}}</option>
+</select>
+
+<button (click)="vid1.play()" [disabled]="playing">PLAY</button>
+<button (click)="vid1.pause()" [disabled]="vid1.paused">PAUSE</button>
+

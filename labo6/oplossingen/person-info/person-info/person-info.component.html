@@ -1,0 +1,27 @@
+<div class="ui-inputgroup">
+
+  <input type="text" pInputText placeholder="Naam" [(ngModel)]="person.Name">
+  <input type="text" pInputText placeholder="Voornaam" [(ngModel)]="person.FirstName">
+</div>
+<input type="text" pInputText placeholder="Straat" [(ngModel)]="person.Street">
+<input type="text" pInputText placeholder="Nr" [(ngModel)]="person.Number">
+<br>
+<input type="text" pInputText placeholder="Gemeente" [(ngModel)]="person.City">
+<br>
+<!-- <button (click)="Save()">Bewaren</button> -->
+
+<!-- <div *ngIf="saved"> -->
+<div>
+  <div>
+    {{person.FirstName}} {{person.Name}}
+  </div>
+
+  <div>
+    {{person.Street}} {{person.Number}}
+  </div>
+
+  <div>
+    {{person.City}}
+  </div>
+
+</div>

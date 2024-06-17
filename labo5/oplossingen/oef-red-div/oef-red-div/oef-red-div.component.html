@@ -1,0 +1,9 @@
+<div (mousemove)="Dosomething($event)" (mousedown)="Down()" (mouseup)="Up()" (mouseleave)="Up()" (mouseenter)="Enter($event)" [ngClass]="classname">
+  <p>
+    <strong><label>{{x}}/{{y}}</label></strong>
+    <br>
+    {{movecount}} moves
+    <br>
+    {{hitcount}} hits
+  </p>
+</div>

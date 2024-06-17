@@ -1,0 +1,4 @@
+Voor deze toepassing verwijs ik naar de Twitter-toepassing op Digitap. In de oplossing vind je een goed voorbeeld van een Angular-toepassing die gebruik maakt van een Nest-backend. Veel succes met het examen!
+
+
+

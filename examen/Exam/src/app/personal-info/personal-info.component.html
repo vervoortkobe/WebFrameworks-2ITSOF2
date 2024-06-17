@@ -1,0 +1,53 @@
+<article class="message">
+    <div class="message-header">
+      <p>Enter your personal info</p>
+    </div>
+    <div class="message-body">
+      <div class="field">
+        <label class="label">Name and firstname</label>
+        <div class="control">
+          <input class="input" type="text" #names (input)="FillUsername(names.value)">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Username</label>
+        <div class="control has-icons-left">
+          <input class="input is-success" type="text" #usernameField [value]="username">
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">E-mail</label>
+        <div class="control has-icons-left has-icons-right">
+          <input class="input" type="email" #email (change)="ValidateEmail(email.value)">
+          <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span class="icon is-small is-right" *ngIf="emailInvalid">
+            <i class="fas fa-exclamation-triangle"></i>
+          </span>
+        </div>
+        <p class="help is-danger" *ngIf="emailInvalid">This email is invalid</p>
+      </div>
+
+      <div class="field">
+        <label class="label">Level</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Easy</option>
+              <option>Expert</option>
+            </select>
+          </div>
+        </div>
+      </div>
+     
+      <div class="block buttons is-right">
+        <button class="button is-success" [disabled]="NextBtnDisabled()" [routerLink]="'/game'">Next</button>
+      </div>
+    </div>
+  </article>

@@ -1,0 +1,8 @@
+<table>
+  <tr *ngFor="let p of people; let i = index">
+    <td>{{p.Name | uppercase}}</td>
+    <td>{{p.Firstname}}</td>
+    <td>{{p.Birth | date: "dd-MMM-yyyy"}}</td>
+    <td>{{p.Age}} j.</td>
+  </tr>
+</table>

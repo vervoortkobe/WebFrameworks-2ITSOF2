@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "../build",
+    "target": "esnext",
+    "strictNullChecks": true,
+    "moduleResolution": "node"
+  }
+}

@@ -1,0 +1,14 @@
+<div>
+  <h1>{{title}}</h1>
+  <div >
+    <p *ngIf="items.length == 0">Je lijst is momenteel leeg</p>
+    <br>
+    <ol>
+      <li *ngFor="let item of items; let i = index">{{item}} <button (click)="Verwijder(i)">X</button> </li>
+    </ol>
+    <form action="">
+      <input name="in1" #invoer type="text" [value]="item" (input)="SetItem(invoer.value)" placeholder="Geef hier je item in">
+      <button (click)="Voegtoe()" [disabled]="item == ''">Voeg toe</button>
+    </form>
+  </div>
+</div>

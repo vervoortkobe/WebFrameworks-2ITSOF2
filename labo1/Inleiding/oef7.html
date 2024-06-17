@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <button id="b1">Page 1</button>
+    <button id="b2">Page 2</button>
+    <div id="card" class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img
+            src="https://bulma.io/images/placeholders/1280x960.png"
+            alt="Placeholder image"
+          />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-left">
+            <figure class="image is-48x48">
+              <img
+                src="https://bulma.io/images/placeholders/96x96.png"
+                alt="Placeholder image"
+              />
+            </figure>
+          </div>
+          <div class="media-content">
+            <p class="title is-4">John Smith</p>
+            <p class="subtitle is-6">@johnsmith</p>
+          </div>
+        </div>
+
+        <div class="content">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+          iaculis mauris. <a>@bulmaio</a>. <a href="#">#css</a>
+          <a href="#">#responsive</a>
+          <br />
+          <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        </div>
+      </div>
+    </div>
+    <script>
+      const b1 = document.getElementById("b1");
+      const b2 = document.getElementById("b2");
+
+      b1.addEventListener("click", (e) => {
+        show();
+        history.pushState({ id: 1 }, "", "#b1");
+      });
+      b2.addEventListener("click", (e) => {
+        hide();
+        history.pushState({ id: 2 }, "", "#b2");
+      });
+      window.onhashchange = function () {
+        if (history.state.id == 1) {
+          show();
+        } else if (history.state.id == 2) {
+          hide();
+        }
+      };
+      function show() {
+        const card = document.getElementById("card");
+        card.style.display = "block";
+      }
+
+      function hide() {
+        const card = document.getElementById("card");
+        card.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

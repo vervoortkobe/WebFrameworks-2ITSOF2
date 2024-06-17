@@ -1,0 +1,10 @@
+<div *ngIf="score">
+    <div>Het resultaat is van de test is: {{score}} / {{maxScore}}</div>
+    <div *ngIf="score < 4">Dit resultaat is ondermaats</div>
+    <div *ngIf="score > 7">Mooie score !”</div>
+
+    <!-- Alternatief met 'methods' op de klasse -->
+    <!-- <div *ngIf="BadScore()">Dit resultaat is ondermaats</div>
+    <div *ngIf="GoodScore()">Mooie score !”</div>  -->
+
+</div>

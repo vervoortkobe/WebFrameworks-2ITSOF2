@@ -1,0 +1,14 @@
+
+        <p-card title="Advanced Card" subtitle="Welkom" styleClass="ui-card-shadow">
+            <p-header>
+                <img src="Card" [src]="imageURL">
+            </p-header>
+            <!-- klassieke HTML dropdown -->
+            <select name="" id="" [(ngModel)]="foto">
+                <option *ngFor="let f of fotos" value="{{f.value}}">{{f.label}}</option>
+            </select>
+            <!-- PrimeNG Dropdown (met gratis filtermogelijkheid) -->
+            <p-dropdown [options]="fotos" [(ngModel)]="foto" [filter]="true"></p-dropdown>
+            <div>Welkom bij de cursus Web Frameworks ! Dit is een Angular 6 Single Page Application, gestyled met PrimeNG</div>
+        </p-card>
+    

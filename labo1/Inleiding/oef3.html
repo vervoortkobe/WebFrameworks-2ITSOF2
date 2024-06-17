@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="width: 200px; height: 200px; background-color: red">
+      <a></a>
+    </div>
+
+    <span
+      >De huidige tijd:
+      <p></p
+    ></span>
+  </body>
+  <script>
+    let mouse = { x: 0, y: 0 };
+    window.addEventListener("mousemove", (m) => {
+      mouse.x = m.clientX;
+      mouse.y = m.clientY;
+    });
+    document.querySelector("div").addEventListener("mousemove", (e) => {
+      document.querySelector("a").innerText = `${mouse.x}/${mouse.y}`;
+    });
+    function a() {
+      let time = new Date(Date.now());
+      document.querySelector(
+        "span p"
+      ).innerText = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`;
+    }
+    setInterval(a, 1000);
+  </script>
+</html>

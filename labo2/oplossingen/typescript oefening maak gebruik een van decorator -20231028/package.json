@@ -1,0 +1,9 @@
+{
+    "main": "dist/main.js",
+    "dependencies": {
+        "lodash": "4.17.4",
+        "@types/lodash": "4.14.77",
+        "lodash-decorators": "4.4.1",
+        "@types/lodash-decorators": "4.0.0"
+    }
+}

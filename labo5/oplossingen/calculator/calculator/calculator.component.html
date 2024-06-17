@@ -1,0 +1,10 @@
+<p-panel header="Calculator">
+  <input type="text" disabled pInputText placeholder="0,00" value="{{display}}">
+  <table>
+    <tr *ngFor="let row of numbers">
+      <td *ngFor="let number of row">
+        <button pButton label="{{number}}" (click)="Getal(number)"></button>
+      </td>
+    </tr>
+  </table>
+</p-panel>

@@ -1,0 +1,16 @@
+div {
+    width: 200px;
+    height: 200px;
+    background: red;
+    display: table;
+}
+
+p {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+div.click {
+    background: greenyellow;
+}

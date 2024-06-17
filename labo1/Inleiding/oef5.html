@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+  </head>
+  <body>
+    <div class="autos">
+      <select>
+        <option></option>
+        <option>Jaguar</option>
+        <option>Tesla</option>
+        <option>BMW</option>
+      </select>
+    </div>
+    <div class="kleuren">
+      <select id="t">
+        <option></option>
+        <option>Groen</option>
+        <option>Rood</option>
+        <option>Geel</option>
+      </select>
+    </div>
+    <script>
+      document
+        .getElementsByClassName("autos")[0]
+        .addEventListener("change", (e) => {
+          let rand = Math.floor(Math.random() * 3) + 1;
+          document.getElementById("t").selectedIndex = rand;
+          console.log(document.getElementById("t")[rand].innerText);
+        });
+    </script>
+  </body>
+</html>
